@@ -175,10 +175,9 @@
 				{
                     $("<a/>").prop({
                         className: "ui-rating-star ui-rating-empty",
-                        title: $(this).text(),   // perserve the option text as a title.
-                        value: this.value        // perserve the value.
-                    }).appendTo(elm);
-				}    
+                        title: $(this).text()   // perserve the option text as a title.
+                    }).attr("value",this.value).appendTo(elm);
+		}    
             });
             // create the cancel
             if (true == settings.showCancel) {
